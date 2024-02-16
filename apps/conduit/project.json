@@ -1,0 +1,73 @@
+{
+  "name": "conduit",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "conduit",
+  "sourceRoot": "apps/conduit/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/conduit",
+        "index": "apps/conduit/src/index.html",
+        "browser": "apps/conduit/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/conduit/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/conduit/src/favicon.ico", "apps/conduit/src/assets"],
+        "styles": ["apps/conduit/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "conduit:build:production"
+        },
+        "development": {
+          "buildTarget": "conduit:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "conduit:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "conduit:build",
+        "staticFilePath": "dist/apps/conduit/browser"
+      }
+    }
+  }
+}
