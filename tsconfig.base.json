@@ -14,7 +14,31 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@auth/feature-login": ["libs/core/auth/feature-login/src/index.ts"],
+      "@auth/feature-register": [
+        "libs/core/auth/feature-register/src/index.ts"
+      ],
+      "@conduit/article/article-create": [
+        "libs/conduit/article/article-create/src/index.ts"
+      ],
+      "@conduit/article/article-read": [
+        "libs/conduit/article/article-read/src/index.ts"
+      ],
+      "@conduit/article/articles-view": [
+        "libs/conduit/article/articles/src/index.ts"
+      ],
+      "@core/error-handler": ["libs/core/error-handler/src/index.ts"],
+      "@conduit/layout": ["libs/conduit/core/layout/src/index.ts"],
+      "@conduit/profile": ["libs/conduit/profile/feature-profile/src/index.ts"],
+      "@conduit/profile-edit-container": [
+        "libs/conduit/profile/feature-profile-edit/src/index.ts"
+      ],
+      "@core/auth/data-access": ["libs/core/auth/data-access/src/index.ts"],
+      "@core/data-access": ["libs/core/data-access/src/index.ts"],
+      "@core/http": ["libs/core/http/src/index.ts"],
+      "@core/utils": ["libs/core/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

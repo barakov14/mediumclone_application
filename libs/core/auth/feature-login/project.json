@@ -1,0 +1,9 @@
+{
+  "name": "login-container",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/auth/feature-login/src",
+  "prefix": "conduit",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

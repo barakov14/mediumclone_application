@@ -1,0 +1,9 @@
+{
+  "name": "article-create-container",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/conduit/article/article-create/src",
+  "prefix": "conduit",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

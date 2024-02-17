@@ -17,7 +17,9 @@
         "tsConfig": "apps/conduit/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/conduit/src/favicon.ico", "apps/conduit/src/assets"],
-        "styles": ["apps/conduit/src/styles.scss"],
+        "styles": [
+          "apps/conduit/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

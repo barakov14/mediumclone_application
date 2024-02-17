@@ -1,0 +1,9 @@
+{
+  "name": "profile-container",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/conduit/profile/feature-profile/src",
+  "prefix": "conduit",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

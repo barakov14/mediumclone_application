@@ -1,0 +1,9 @@
+{
+  "name": "article-read-container",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/conduit/article/article-read/src",
+  "prefix": "conduit",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}
