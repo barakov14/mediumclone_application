@@ -1,25 +1,24 @@
 import {ApplicationConfig, isDevMode} from '@angular/core'
-import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
+import {provideRouter} from '@angular/router'
+import {appRoutes} from './app.routes'
 import {API_URL} from '@core/http'
 import {environment} from '../environments/environment.development'
 import {provideStore} from '@ngrx/store'
 import {AuthEffects, authFeature} from '@core/auth/data-access'
 import {provideEffects} from '@ngrx/effects'
 import {provideStoreDevtools} from '@ngrx/store-devtools'
-import {provideHttpClient, withInterceptors} from '@angular/common/http'
+import {provideHttpClient} from '@angular/common/http'
 import {provideRouterStore} from '@ngrx/router-store'
-import {provideComponentStore} from '@ngrx/component-store'
+import {articlesFeature, ArticleEffects} from '@conduit/article/data-access'
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideEffects(
-      AuthEffects
-    ),
+    provideEffects(AuthEffects, ArticleEffects),
     provideRouter(appRoutes),
     provideRouterStore(),
     provideStore({
       [authFeature.name]: authFeature.reducer,
+      [articlesFeature.name]: articlesFeature.reducer,
     }),
     provideHttpClient(),
     provideStoreDevtools({
@@ -34,4 +33,4 @@ export const appConfig: ApplicationConfig = {
       useValue: environment.api_url,
     },
   ],
-};
+}

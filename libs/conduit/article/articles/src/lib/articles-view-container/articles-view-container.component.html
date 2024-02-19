@@ -1,1 +1,4 @@
-<conduit-articles-view></conduit-articles-view>
+<conduit-articles-view
+  [articles]="articles$ | async"
+  [articleStatus]="selectStatus | async"
+></conduit-articles-view>

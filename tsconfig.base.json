@@ -22,6 +22,9 @@
       "@conduit/article/article-create": [
         "libs/conduit/article/article-create/src/index.ts"
       ],
+      "@conduit/article/data-access": [
+        "libs/conduit/article/data-access/src/index.ts"
+      ],
       "@conduit/article/article-read": [
         "libs/conduit/article/article-read/src/index.ts"
       ],
